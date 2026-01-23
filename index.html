@@ -59,4 +59,174 @@
     }
 
     .btn {
-      display: inline
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background-color: white;
+      color: var(--principal);
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #e9eceb;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 3rem 1.5rem;
+    }
+
+    section h2 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      color: var(--principal);
+    }
+
+    .accordion {
+      border-top: 1px solid #d1d5db;
+    }
+
+    details {
+      border-bottom: 1px solid #d1d5db;
+      padding: 1rem 0;
+    }
+
+    summary {
+      font-weight: 500;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    summary::marker {
+      display: none;
+    }
+
+    details p {
+      margin-top: 0.75rem;
+      color: var(--gris);
+      font-size: 0.95rem;
+    }
+
+    .sobre-mi, .modalidad {
+      background-color: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    }
+
+    footer {
+      background-color: #1f2933;
+      color: #e5e7eb;
+      text-align: center;
+      padding: 2rem 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Lic. Diego Valenzuela</h1>
+  <p>Atención psicológica online con enfoque psicoanalítico. Un espacio de escucha profesional, confidencial y respetuoso de los tiempos subjetivos.</p>
+  <a class="btn" href="https://wa.me/" target="_blank">Agendar primera consulta</a>
+</header>
+
+<section>
+  <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80" style="width:100%; border-radius:12px; margin-bottom:2rem;">
+  <h2>En qué puedo acompañarte</h2>
+  <div class="accordion">
+    <details>
+      <summary>Ansiedad y angustia</summary>
+      <p>Manifestaciones de malestar que se expresan en el cuerpo, el pensamiento o el vínculo con los otros, muchas veces sin una causa consciente clara.</p>
+    </details>
+    <details>
+      <summary>Crisis vitales</summary>
+      <p>Momentos de quiebre subjetivo frente a decisiones, pérdidas o cambios que interrumpen el modo habitual de vivir.</p>
+    </details>
+    <details>
+      <summary>Duelo y pérdidas</summary>
+      <p>Procesos singulares de elaboración frente a pérdidas afectivas, separaciones o transformaciones significativas.</p>
+    </details>
+  </div>
+</section>
+
+<section class="sobre-mi">
+  <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80" style="width:100%; border-radius:12px; margin-bottom:2rem;">
+  <h2>Sobre mí</h2>
+  <p>Soy Licenciado en Psicología, con formación en psicoanálisis y experiencia clínica en el ámbito hospitalario.</p>
+  <p>Concibo el espacio terapéutico como un lugar de escucha, donde cada sujeto pueda hablar sin juicios y encontrar un tiempo para comprender su malestar.</p>
+</section>
+
+<section class="modalidad">
+  <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80" style="width:100%; border-radius:12px; margin-bottom:2rem;">
+  <h2>Modalidad de atención</h2>
+  <p>
+    • Atención 100% online<br>
+    • Sesiones individuales<br>
+    • Duración aproximada: 45 minutos<br>
+    • Frecuencia a acordar
+  </p>
+</section>
+
+<section>
+  <h2>Preguntas frecuentes</h2>
+  <div class="accordion">
+
+    <details>
+      <summary>¿La atención online es efectiva?</summary>
+      <p>Desde el psicoanálisis, lo central no es el espacio físico sino la posibilidad de la palabra en un encuadre estable. La modalidad online permite sostener un trabajo clínico serio y profundo.</p>
+    </details>
+
+    <details>
+      <summary>¿Cómo consulto el valor de la sesión?</summary>
+      <p>El valor se informa de manera personal. El acuerdo económico forma parte del encuadre y sostiene el compromiso con el proceso terapéutico.</p>
+    </details>
+
+    <details>
+      <summary>¿Es confidencial el espacio terapéutico?</summary>
+      <p>Sí. Todo lo trabajado en sesión está protegido por el secreto profesional, condición fundamental para que la palabra pueda desplegarse con libertad.</p>
+    </details>
+
+    <details>
+      <summary>¿Necesito tener un problema claro para comenzar?</summary>
+      <p>No. Muchas consultas parten de un malestar difuso o difícil de nombrar. El tratamiento comienza justamente allí donde algo no se entiende.</p>
+    </details>
+
+    <details>
+      <summary>¿Cuánto dura un tratamiento?</summary>
+      <p>No tiene una duración preestablecida. Cada proceso es singular y responde a los tiempos subjetivos de quien consulta.</p>
+    </details>
+
+    <details>
+      <summary>¿Qué sucede si quiero interrumpir?</summary>
+      <p>La interrupción también puede trabajarse en sesión. Hablarla permite dar un cierre y elaborar lo recorrido.</p>
+    </details>
+
+  </div>
+</section>
+
+<section>
+  <h2>Contacto</h2>
+  <p>Si sentís que este espacio puede ayudarte, podés escribirme para coordinar una primera entrevista.</p>
+  <a class="btn" href="https://wa.me/549XXXXXXXXXX" target="_blank">Contactar por WhatsApp</a>
+</section>
+
+<footer>
+  <p>Lic. Diego Valenzuela – Psicología Online</p>
+  <p>Matrícula profesional visible · Atención confidencial · Enfoque psicoanalítico</p>
+</footer>
+
+</body>
+</html>
