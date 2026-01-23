@@ -32,6 +32,10 @@ h1, h2, h3 {
    HERO / HEADER
 ===================== */
 
+header {
+  text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
 .hero {
   position: relative;
   height: 90vh;
