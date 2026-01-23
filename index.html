@@ -1,156 +1,165 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html><html lang="es">
 <head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lic. Diego Valenzuela | Psicología Online</title>
-  <meta name="description" content="Atención psicológica online con enfoque psicoanalítico. Acompañamiento en ansiedad, crisis vitales y duelo.">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lic. Diego Valenzuela | Psicología Online</title>  <!-- Fuente seria, moderna y cercana -->  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">  <style>
+    :root {
+      --principal: #2f3e46;
+      --secundario: #52796f;
+      --claro: #f4f6f5;
+      --texto: #1f2933;
+      --gris: #6b7280;
+    }
 
-<!-- BOTÓN WHATSAPP -->
-<a href="https://wa.me/549XXXXXXXXXX" class="whatsapp-float" target="_blank">
-  WhatsApp
-</a>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<header class="hero">
-  <h1>Hay momentos en los que algo no está bien,<br> aunque cueste ponerlo en palabras.</h1>
-  <p>Atención psicológica online · Enfoque psicoanalítico</p>
-  <a href="#agenda" class="cta">Agendar primera consulta</a>
-</header>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--claro);
+      color: var(--texto);
+      line-height: 1.6;
+    }
 
-<section class="section">
-  <h2>¿En qué puedo acompañarte?</h2>
+    header {
+      background: linear-gradient(135deg, var(--principal), var(--secundario));
+      color: white;
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
 
-  <div class="cards">
+    header h1 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
 
-    <button class="card accordion">
-      <h3>Ansiedad y angustia</h3>
-    </button>
-    <div class="panel">
-      <p>
-        Sensaciones de inquietud, pensamientos que no se detienen, malestar corporal
-        o una angustia que aparece sin causa clara. A veces se sabe qué pasa, otras no,
-        pero algo se vuelve difícil de sostener en la vida cotidiana.
-      </p>
-    </div>
+    header p {
+      max-width: 680px;
+      margin: auto;
+      font-size: 1.05rem;
+      opacity: 0.95;
+    }
 
-    <button class="card accordion">
-      <h3>Crisis vitales</h3>
-    </button>
-    <div class="panel">
-      <p>
-        Momentos de quiebre, cambios importantes, decisiones que pesan o situaciones
-        que desordenan lo conocido. Las crisis suelen abrir preguntas sobre uno mismo,
-        los vínculos, el trabajo o el sentido de lo que se hace.
-      </p>
-    </div>
+    .btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background-color: white;
+      color: var(--principal);
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
 
-    <button class="card accordion">
-      <h3>Procesos de duelo</h3>
-    </button>
-    <div class="panel">
-      <p>
-        Pérdidas de personas, vínculos, proyectos o etapas de la vida. El duelo no sigue
-        un camino lineal ni tiene tiempos universales, y muchas veces necesita un espacio
-        donde poder ser elaborado.
-      </p>
-    </div>
+    .btn:hover {
+      background-color: #e9eceb;
+    }
 
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 3rem 1.5rem;
+    }
+
+    section h2 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      color: var(--principal);
+    }
+
+    .accordion {
+      border-top: 1px solid #d1d5db;
+    }
+
+    details {
+      border-bottom: 1px solid #d1d5db;
+      padding: 1rem 0;
+    }
+
+    summary {
+      font-weight: 500;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    summary::marker {
+      display: none;
+    }
+
+    details p {
+      margin-top: 0.75rem;
+      color: var(--gris);
+    }
+
+    .sobre-mi, .modalidad {
+      background-color: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    }
+
+    footer {
+      background-color: #1f2933;
+      color: #e5e7eb;
+      text-align: center;
+      padding: 2rem 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #cbd5e1;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style></head><body><header>
+  <h1>Lic. Diego Valenzuela</h1>
+  <p>Atención psicológica online con enfoque psicoanalítico. Un espacio de escucha profesional, confidencial y respetuoso de los tiempos subjetivos.</p>
+  <a class="btn" href="https://wa.me/" target="_blank">Agendar primera consulta</a>
+</header><section>
+  <h2>En qué puedo acompañarte</h2>
+  <div class="accordion">
+    <details>
+      <summary>Ansiedad y angustia</summary>
+      <p>Estados de inquietud, preocupación constante o sensación de desborde emocional que interfieren en la vida cotidiana.</p>
+    </details>
+    <details>
+      <summary>Crisis vitales</summary>
+      <p>Momentos de cambio, decisiones difíciles o rupturas que generan desorientación y malestar subjetivo.</p>
+    </details>
+    <details>
+      <summary>Duelo y pérdidas</summary>
+      <p>Procesos de elaboración frente a pérdidas afectivas, separaciones o transformaciones significativas.</p>
+    </details>
   </div>
-</section>
-
-<section class="section light">
-  <h2>Mi enfoque clínico</h2>
-
-  <button class="accordion">
-    Psicoanálisis y trabajo clínico
-  </button>
-  <div class="panel">
-    <p>
-      Trabajo desde el psicoanálisis, entendiendo que cada persona atraviesa
-      su malestar de manera singular. El espacio terapéutico se construye
-      desde la escucha, sin recetas ni soluciones universales.
-    </p>
-  </div>
-</section>
-
-<section class="section">
+</section><section class="sobre-mi">
   <h2>Sobre mí</h2>
-
-  <button class="accordion">Conocer más sobre mi práctica profesional</button>
-  <div class="panel">
-    <p>
-      Soy <strong>Lic. Diego Valenzuela</strong>, Licenciado en Psicología, y trabajo
-      con jóvenes adultos y adultos que atraviesan distintos momentos de malestar subjetivo.
-    </p>
-    <p>
-      Mi práctica se orienta desde el psicoanálisis, entendiendo que no todas las personas
-      sufren de la misma manera ni por los mismos motivos. Por eso, el espacio terapéutico
-      no se basa en soluciones rápidas, sino en la construcción de un lugar de escucha
-      donde sea posible poner en palabras aquello que insiste, preocupa o desordena.
-    </p>
-    <p>
-      Acompaño procesos vinculados a la ansiedad, las crisis vitales y el duelo, respetando
-      los tiempos de cada persona y sosteniendo una práctica clínica ética, seria y comprometida.
-    </p>
-    <p>
-      La atención es 100% online, en un espacio confidencial y cuidado, pensado para quienes
-      buscan un acompañamiento profesional sin perder cercanía.
-    </p>
-    <p><strong>Matrícula profesional Provincial:</strong> 85755</p>
-  </div>
-</section>
-<section class="section light">
-  <h2>¿Cómo funciona la atención online?</h2>
-
-  <button class="accordion">1. Primer contacto</button>
-  <div class="panel"><p>Agendás tu primera consulta de forma simple.</p></div>
-
-  <button class="accordion">2. Coordinación</button>
-  <div class="panel"><p>Recibís el enlace y las indicaciones.</p></div>
-
-  <button class="accordion">3. Encuentro clínico</button>
-  <div class="panel"><p>Sesión online en un espacio confidencial.</p></div>
-</section>
-
-<section class="section" id="agenda">
-  <h2>Agendar primera consulta</h2>
-  <!-- CALENDLY -->
-  <div class="calendly-inline-widget"
-       data-url="https://calendly.com/tuusuario"
-       style="min-width:320px;height:650px;">
-  </div>
-</section>
-
-<section class="section light">
-  <h2>Preguntas frecuentes</h2>
-  <details>
-    <summary>¿Cómo es la primera consulta?</summary>
-    <p>Es un espacio para comenzar a hablar de lo que te trae a consulta y evaluar el proceso.</p>
-  </details>
-  <details>
-    <summary>¿Cuánto dura una sesión?</summary>
-    <p>La duración habitual es de 45 minutos.</p>
-  </details>
-  <details>
-    <summary>¿Cuál es el valor?</summary>
-    <p>Podés consultarlo por WhatsApp.</p>
-  </details>
-</section>
-
-<footer>
-  <p>Atención psicológica online · Público hispanohablante</p>
-  <p class="legal">
-    Aviso de confidencialidad: la información compartida en este espacio es privada y protegida por el secreto profesional.
-  </p>
-</footer>
-
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-<script src="script.js"></script>
-</body>
+  <p>Soy Licenciado en Psicología, con formación en psicoanálisis y experiencia clínica en el ámbito hospitalario. Acompaño a adolescentes y adultos en procesos terapéuticos orientados a la comprensión del malestar y de los conflictos subjetivos.</p>
+  <p>Concibo el espacio terapéutico como un lugar de escucha, sin juicios ni directivas, donde cada persona pueda hablar con libertad y ser tomada en serio en su singularidad.</p>
+</section><section class="modalidad">
+  <h2>Modalidad de atención</h2>
+  <p>• Atención 100% online<br>
+     • Sesiones individuales<br>
+     • Duración aproximada: 45 minutos<br>
+     • Frecuencia a acordar</p>
+</section><section>
+  <h2>Contacto</h2>
+  <p>Si sentís que este espacio puede ayudarte, podés escribirme para coordinar una primera entrevista.</p>
+  <a class="btn" href="https://wa.me/" target="_blank">Contactar por WhatsApp</a>
+</section><footer>
+  <p>Lic. Diego Valenzuela – Psicología Online</p>
+  <p>Matrícula profesional visible · Atención confidencial</p>
+</footer></body>
 </html>
