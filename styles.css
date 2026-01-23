@@ -1,225 +1,191 @@
+/* =====================
+   BASE
+===================== */
+
+:root {
+  --principal: #2f3e46;
+  --secundario: #52796f;
+  --claro: #f6f5f3;
+  --texto: #2f2f2f;
+  --gris: #6b7280;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Inter', sans-serif;
-  margin: 0;
-  background: #f6f5f3;
-  color: #2f2f2f;
+  background: var(--claro);
+  color: var(--texto);
   line-height: 1.7;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: 'Playfair Display', serif;
   font-weight: 500;
 }
 
+/* =====================
+   HERO / HEADER
+===================== */
+
 .hero {
-  background: #e3e8e6;
-  padding: 90px 20px;
+  position: relative;
+  height: 90vh;
+  background-image: url("https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  padding: 2rem;
 }
 
-.cta {
-  background: #4a5d57;
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 700px;
   color: #ffffff;
-  padding: 14px 28px;
-  border-radius: 6px;
-  font-weight: 500;
 }
 
-.section {
-  padding: 60px 20px;
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #ffffff;
+  color: var(--principal);
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #e5e7eb;
+}
+
+/* =====================
+   SECCIONES
+===================== */
+
+section {
   max-width: 900px;
   margin: auto;
+  padding: 4rem 1.5rem;
 }
+
+section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  color: var(--principal);
+}
+
+/* =====================
+   IMÁGENES
+===================== */
+
+section img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  display: block;
+}
+
+/* =====================
+   ACORDEÓN
+===================== */
 
 .accordion {
-  background: none;
-  border: 1px solid #d0d0d0;
-  padding: 16px;
-  width: 100%;
-  text-align: left;
-  font-size: 1rem;
+  border-top: 1px solid #d1d5db;
+}
+
+details {
+  border-bottom: 1px solid #d1d5db;
+  padding: 1rem 0;
+}
+
+summary {
   font-weight: 500;
   cursor: pointer;
-  border-radius: 6px;
-  margin-top: 12px;
+  list-style: none;
 }
 
-.panel {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  margin-top: 10px;
+summary::marker {
+  display: none;
 }
 
-
-.section.light {
-  background: #ffffff;
+details p {
+  margin-top: 0.75rem;
+  color: var(--gris);
 }
 
-.cards {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
+/* =====================
+   TARJETAS
+===================== */
 
 .card {
-  background: white;
-  padding: 20px;
-  border-radius: 6px;
-  flex: 1;
-  min-width: 200px;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
 }
 
+/* =====================
+   BOTONES GENERALES
+===================== */
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--principal);
+  color: #ffffff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* =====================
+   FOOTER
+===================== */
+
 footer {
-  background: #ddd;
-  padding: 30px 20px;
+  background: #1f2933;
+  color: #e5e7eb;
   text-align: center;
+  padding: 2rem 1.5rem;
   font-size: 0.9rem;
 }
 
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25d366;
-  color: white;
-  padding: 12px 16px;
-  border-radius: 50px;
-  text-decoration: none;
-}
+/* =====================
+   MOBILE
+===================== */
 
-.card {
-  border: 1px solid #ddd;
-  background: white;
-  padding: 24px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-}
-
-.card h3 {
-  margin-top: 0;
-  font-family: 'Playfair Display', serif;
-}
-
-.hero {
-  position: relative;
-  height: 90vh;
-  background-image: url("https://images.unsplash.com/photo-1505691938895-1758d7feb511");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Capa para suavizar la imagen */
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35);
-}
-
-/* Contenido */
-.hero-content {
-  position: relative;
-  text-align: center;
-  color: #ffffff;
-  max-width: 700px;
-  padding: 20px;
-}
-
-.hero-content h1 {
-  font-family: "Playfair Display", serif;
-  font-size: 3rem;
-  font-weight: 500;
-  margin-bottom: 15px;
-}
-
-.hero-content p {
-  font-family: "Inter", sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 30px;
-  opacity: 0.9;
-}
-
-.hero-btn {
-  display: inline-block;
-  padding: 12px 28px;
-  border-radius: 30px;
-  background-color: #ffffff;
-  color: #1f2933;
-  font-weight: 500;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.hero-btn:hover {
-  background-color: #e5e7eb;
-}
-
-
-.hero {
-  position: relative;
-  height: 90vh;
-  background-image: url("https://images.unsplash.com/photo-1505691938895-1758d7feb511");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Capa para suavizar la imagen */
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35);
-}
-
-/* Contenido */
-.hero-content {
-  position: relative;
-  text-align: center;
-  color: #ffffff;
-  max-width: 700px;
-  padding: 20px;
-}
-
-.hero-content h1 {
-  font-family: "Playfair Display", serif;
-  font-size: 3rem;
-  font-weight: 500;
-  margin-bottom: 15px;
-}
-
-.hero-content p {
-  font-family: "Inter", sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 30px;
-  opacity: 0.9;
-}
-
-.hero-btn {
-  display: inline-block;
-  padding: 12px 28px;
-  border-radius: 30px;
-  background-color: #ffffff;
-  color: #1f2933;
-  font-weight: 500;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.hero-btn:hover {
-  background-color: #e5e7eb;
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
 }
