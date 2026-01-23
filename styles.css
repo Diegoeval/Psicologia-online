@@ -31,6 +31,27 @@ h1, h2 {
   margin: auto;
 }
 
+.accordion {
+  background: none;
+  border: 1px solid #d0d0d0;
+  padding: 16px;
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-top: 12px;
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  margin-top: 10px;
+}
+
+
 .section.light {
   background: #ffffff;
 }
