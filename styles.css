@@ -1,9 +1,14 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   margin: 0;
-  background: #f4f3f1;
-  color: #333;
-  line-height: 1.6;
+  background: #f6f5f3;
+  color: #2f2f2f;
+  line-height: 1.7;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
 }
 
 .hero {
