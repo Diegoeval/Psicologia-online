@@ -106,3 +106,120 @@ footer {
   margin-top: 0;
   font-family: 'Playfair Display', serif;
 }
+
+.hero {
+  position: relative;
+  height: 90vh;
+  background-image: url("https://images.unsplash.com/photo-1505691938895-1758d7feb511");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Capa para suavizar la imagen */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* Contenido */
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 30px;
+  background-color: #ffffff;
+  color: #1f2933;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #e5e7eb;
+}
+
+
+.hero {
+  position: relative;
+  height: 90vh;
+  background-image: url("https://images.unsplash.com/photo-1505691938895-1758d7feb511");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Capa para suavizar la imagen */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* Contenido */
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 30px;
+  background-color: #ffffff;
+  color: #1f2933;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #e5e7eb;
+}
