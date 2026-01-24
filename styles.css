@@ -1,195 +1,242 @@
-/* =====================
-   BASE
-===================== */
+/* ===============================
+   RESET Y BASE
+================================ */
 
-:root {
-  --principal: #2f3e46;
-  --secundario: #52796f;
-  --claro: #f6f5f3;
-  --texto: #2f2f2f;
-  --gris: #6b7280;
-}
-
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Inter', sans-serif;
-  background: var(--claro);
-  color: var(--texto);
-  line-height: 1.7;
+html {
+  font-size: 16px;
 }
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #ffffff;
+}
+
+/* ===============================
+   TIPOGRAFÍA GENERAL
+================================ */
 
 h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 500;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #1f2933;
 }
 
-/* =====================
-   HERO / HEADER
-===================== */
-
-header {
-  text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+h1 {
+  font-size: 1.6rem;
 }
 
-.hero {
-  position: relative;
-  height: 90vh;
-  background-image: url("https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
+h2 {
+  font-size: 1.35rem;
+  margin-bottom: 0.8rem;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
 }
 
-.hero-content {
-  position: relative;
-  max-width: 700px;
-  color: #ffffff;
-}
-
-.hero-content h1 {
-  font-size: 3rem;
+p {
+  font-size: 1rem;
   margin-bottom: 1rem;
 }
 
-.hero-content p {
-  font-size: 1.1rem;
-  opacity: 0.9;
-  margin-bottom: 2rem;
+/* ===============================
+   HEADER
+================================ */
+
+header {
+  padding: 2rem 1rem;
+  text-align: center;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.45)
+  ),
+  url("https://images.unsplash.com/photo-1551843073-4a9a5b6fcd5a?auto=format&fit=crop&w=1400&q=80");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
 }
 
-.hero-btn {
-  display: inline-block;
-  padding: 12px 28px;
-  background: #ffffff;
-  color: var(--principal);
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background 0.3s ease;
+header h1 {
+  color: #ffffff;
+  margin-bottom: 0.5rem;
 }
 
-.hero-btn:hover {
-  background: #e5e7eb;
+header p {
+  color: #e5e7eb;
+  font-size: 1rem;
 }
 
-/* =====================
-   SECCIONES
-===================== */
+/* ===============================
+   SECCIONES GENERALES
+================================ */
 
 section {
-  max-width: 900px;
-  margin: auto;
-  padding: 4rem 1.5rem;
+  padding: 2rem 1rem;
 }
 
-section h2 {
-  font-size: 1.6rem;
-  margin-bottom: 1.5rem;
-  color: var(--principal);
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-/* =====================
+/* ===============================
    IMÁGENES
-===================== */
+================================ */
 
-section img {
+img {
   width: 100%;
-  border-radius: 12px;
-  margin-bottom: 2rem;
+  height: auto;
   display: block;
+  border-radius: 8px;
 }
 
-/* =====================
-   ACORDEÓN
-===================== */
+/* ===============================
+   BLOQUES DE CONTENIDO
+================================ */
 
-.accordion {
-  border-top: 1px solid #d1d5db;
+.bloque {
+  margin-bottom: 2rem;
 }
 
-details {
-  border-bottom: 1px solid #d1d5db;
-  padding: 1rem 0;
+.bloque p:last-child {
+  margin-bottom: 0;
 }
 
-summary {
-  font-weight: 500;
-  cursor: pointer;
-  list-style: none;
+/* ===============================
+   MODALIDAD / SOBRE MÍ
+================================ */
+
+.sobre-mi,
+.modalidad {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-summary::marker {
-  display: none;
+/* ===============================
+   BLOG
+================================ */
+
+.blog {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-details p {
-  margin-top: 0.75rem;
-  color: var(--gris);
+.articulo {
+  padding: 1.2rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #fafafa;
 }
 
-/* =====================
-   TARJETAS
-===================== */
-
-.card {
-  background: #ffffff;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+.articulo h3 {
+  margin-bottom: 0.5rem;
 }
 
-/* =====================
-   BOTONES GENERALES
-===================== */
+/* ===============================
+   BOTONES / CTA
+================================ */
 
-.btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background: var(--principal);
+.boton,
+a.boton {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 0.9rem;
+  background-color: #1f3a5f;
   color: #ffffff;
-  border-radius: 30px;
   text-decoration: none;
+  border-radius: 6px;
   font-weight: 500;
+  transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-  opacity: 0.9;
+.boton:hover {
+  background-color: #162d4d;
 }
 
-/* =====================
+/* BOTÓN WHATSAPP */
+
+.whatsapp {
+  background-color: #25d366;
+}
+
+.whatsapp:hover {
+  background-color: #1ebe5d;
+}
+
+/* ===============================
    FOOTER
-===================== */
+================================ */
 
 footer {
-  background: #1f2933;
-  color: #e5e7eb;
+  padding: 1.5rem 1rem;
   text-align: center;
-  padding: 2rem 1.5rem;
+  background-color: #f3f4f6;
   font-size: 0.9rem;
+  color: #4b5563;
 }
 
-/* =====================
-   MOBILE
-===================== */
+/* ===============================
+   TABLET (≥768px)
+================================ */
 
-@media (max-width: 600px) {
-  .hero-content h1 {
-    font-size: 2rem;
+@media (min-width: 768px) {
+
+  h1 {
+    font-size: 2.2rem;
   }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  section {
+    padding: 3rem 2rem;
+  }
+
+  .sobre-mi,
+  .modalidad {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .boton {
+    width: auto;
+    display: inline-block;
+    padding: 0.9rem 2rem;
+  }
+
+}
+
+/* ===============================
+   DESKTOP (≥1024px)
+================================ */
+
+@media (min-width: 1024px) {
+
+  header {
+    padding: 4rem 2rem;
+  }
+
+  h1 {
+    font-size: 2.6rem;
+  }
+
+  section {
+    padding: 4rem 3rem;
+  }
+
 }
