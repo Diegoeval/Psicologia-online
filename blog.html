@@ -2,49 +2,118 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Blog | Lic. Diego Valenzuela</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Fuente -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --verde: #52796f;
+      --oscuro: #2f3e46;
+      --fondo: #f4f6f5;
+      --texto: #1f2933;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #f4f6f5;
-      color: #1f2933;
-      line-height: 1.6;
+      background-color: var(--fondo);
+      color: var(--texto);
+      line-height: 1.65;
     }
 
     header {
-      background-color: #2f3e46;
+      background: linear-gradient(
+        rgba(47, 62, 70, 0.85),
+        rgba(47, 62, 70, 0.85)
+      ),
+      url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d");
+      background-size: cover;
+      background-position: center;
       color: white;
-      padding: 3rem 1.5rem;
+      padding: 4rem 1.5rem;
       text-align: center;
     }
 
-    section {
-      max-width: 800px;
-      margin: auto;
-      padding: 3rem 1.5rem;
+    header h1 {
+      font-weight: 500;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
     }
 
-    h1, h2 {
-      font-weight: 500;
-      margin-bottom: 1rem;
+    header p {
+      font-weight: 300;
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    main {
+      max-width: 820px;
+      margin: auto;
+      padding: 3rem 1.5rem;
     }
 
     article {
       background: white;
       padding: 2rem;
-      border-radius: 12px;
-      margin-bottom: 2rem;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      border-radius: 14px;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease;
+    }
+
+    article:hover {
+      transform: translateY(-3px);
+    }
+
+    article h2 {
+      font-weight: 500;
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
+    }
+
+    article p {
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+      color: #374151;
     }
 
     a {
-      color: #52796f;
+      color: var(--verde);
       font-weight: 500;
       text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .volver {
+      display: inline-block;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+
+    /* Mobile refinado */
+    @media (max-width: 600px) {
+      header {
+        padding: 3rem 1.2rem;
+      }
+
+      header h1 {
+        font-size: 1.6rem;
+      }
+
+      article {
+        padding: 1.6rem;
+      }
     }
   </style>
 </head>
@@ -53,26 +122,32 @@
 
 <header>
   <h1>Blog / Artículos</h1>
-  <p>Reflexiones clínicas desde el psicoanálisis</p>
+  <p>Reflexiones clínicas desde una práctica psicoanalítica</p>
 </header>
 
-<section>
+<main>
 
   <article>
     <h2>La repetición en la clínica psicoanalítica</h2>
-    <p>Una lectura freudiana sobre aquello que retorna en la experiencia subjetiva, más allá de la intención consciente.</p>
-    <a href="articulo1.html">Leer artículo completo</a>
+    <p>
+      Una lectura freudiana sobre aquello que retorna en la experiencia subjetiva,
+      más allá de la voluntad consciente y del deseo declarado.
+    </p>
+    <a href="articulo1.html">Leer artículo completo →</a>
   </article>
 
   <article>
     <h2>La ansiedad y el tiempo subjetivo</h2>
-    <p>La prisa, la urgencia y el malestar contemporáneo desde una perspectiva clínica.</p>
-    <a href="articulo2.html">Leer artículo completo</a>
+    <p>
+      La urgencia contemporánea, la prisa y el malestar desde una perspectiva clínica
+      que interroga el vínculo con el tiempo y la espera.
+    </p>
+    <a href="articulo2.html">Leer artículo completo →</a>
   </article>
 
-  <a href="index.html">← Volver al inicio</a>
+  <a class="volver" href="index.html">← Volver al inicio</a>
 
-</section>
+</main>
 
 </body>
 </html>
