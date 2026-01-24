@@ -3,284 +3,317 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Lic. Diego Valenzuela | Psicología Online</title>
-</head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --principal: #2f3e46;
-      --secundario: #52796f;
-      --claro: #f4f6f5;
-      --texto: #1f2933;
-      --gris: #6b7280;
-    }
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <style>
+    /* =====================
+       VARIABLES
+    ====================== */
+    :root {
+      --principal: #2f3e46;
+      --secundario: #52796f;
+      --claro: #f4f6f5;
+      --texto: #1f2933;
+      --gris: #6b7280;
+      --blanco: #ffffff;
+    }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--claro);
-      color: var(--texto);
-      line-height: 1.6;
-    }
+    /* =====================
+       RESET
+    ====================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    header {
-      background-image: linear-gradient(
-        135deg,
-        rgba(47,62,70,0.85),
-        rgba(82,121,111,0.85)
-      ),
-      url('https://images.unsplash.com/photo-1580281657527-47f249e8f6c5?auto=format&fit=crop&w=1600&q=80');
-      background-size: cover;
-      background-position: center;
-      color: white;
-      padding: 4rem 1.5rem;
-      text-align: center;
-    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--claro);
+      color: var(--texto);
+      line-height: 1.6;
+      font-size: 16px;
+    }
 
-    header h1 {
-      font-size: 2.2rem;
-      font-weight: 500;
-      margin-bottom: 1rem;
-    }
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
 
-    header p {
-      max-width: 680px;
-      margin: auto;
-      font-size: 1.05rem;
-      opacity: 0.95;
-    }
+    /* =====================
+       BOTONES
+    ====================== */
+    .btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.7rem 1.4rem;
+      background-color: var(--secundario);
+      color: var(--blanco);
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
 
-    .btn {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 0.75rem 1.5rem;
-      background-color: white;
-      color: var(--principal);
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
+    .btn:hover {
+      background-color: var(--principal);
+    }
 
-    .btn:hover {
-      background-color: #e9eceb;
-    }
+    /* =====================
+       HEADER (MOBILE FIRST)
+    ====================== */
+    header {
+      background-image:
+        linear-gradient(
+          135deg,
+          rgba(47,62,70,0.85),
+          rgba(82,121,111,0.85)
+        ),
+        url('https://images.unsplash.com/photo-1580281657527-47f249e8f6c5?auto=format&fit=crop&w=1200&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 3rem 1.2rem;
+    }
 
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 3rem 1.5rem;
-    }
+    header h1 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
 
-    section h2 {
-      font-size: 1.6rem;
-      font-weight: 500;
-      margin-bottom: 1.5rem;
-      color: var(--principal);
-    }
+    header p {
+      font-size: 0.95rem;
+      opacity: 0.95;
+    }
 
-    .accordion {
-      border-top: 1px solid #d1d5db;
-    }
+    /* =====================
+       SECCIONES
+    ====================== */
+    section {
+      padding: 2.5rem 1.2rem;
+    }
 
-    details {
-      border-bottom: 1px solid #d1d5db;
-      padding: 1rem 0;
-    }
+    section h2 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-bottom: 1.2rem;
+      color: var(--principal);
+    }
 
-    summary {
-      font-weight: 500;
-      cursor: pointer;
-      list-style: none;
-    }
+    section p {
+      font-size: 0.95rem;
+      color: var(--texto);
+    }
 
-    summary::marker {
-      display: none;
-    }
+    .box {
+      background-color: var(--blanco);
+      border-radius: 14px;
+      padding: 1.8rem;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.05);
+    }
 
-    details p {
-      margin-top: 0.75rem;
-      color: var(--gris);
-    }
+    /* =====================
+       ACORDEÓN
+    ====================== */
+    .accordion details {
+      border-bottom: 1px solid #d1d5db;
+      padding: 0.8rem 0;
+    }
 
-    .sobre-mi,
-    .modalidad {
-      background-color: white;
-      border-radius: 12px;
-      padding: 2rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
-    }
+    .accordion summary {
+      cursor: pointer;
+      font-weight: 500;
+      list-style: none;
+    }
 
-    footer {
-      background-color: #1f2933;
-      color: #e5e7eb;
-      text-align: center;
-      padding: 2rem 1.5rem;
-      font-size: 0.9rem;
-    }
+    .accordion summary::marker {
+      display: none;
+    }
 
-    footer a {
-      color: #cbd5e1;
-      text-decoration: none;
-    }
+    .accordion p {
+      margin-top: 0.6rem;
+      color: var(--gris);
+      font-size: 0.9rem;
+    }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.8rem;
-      }
-    }
-  </style>
+    /* =====================
+       FOOTER
+    ====================== */
+    footer {
+      background-color: #1f2933;
+      color: #e5e7eb;
+      text-align: center;
+      padding: 2rem 1.2rem;
+      font-size: 0.85rem;
+    }
+
+    /* =====================
+       TABLET
+    ====================== */
+    @media (min-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header p {
+        font-size: 1.05rem;
+        max-width: 700px;
+        margin: auto;
+      }
+
+      section {
+        max-width: 900px;
+        margin: auto;
+      }
+    }
+
+    /* =====================
+       DESKTOP
+    ====================== */
+    @media (min-width: 1024px) {
+      header {
+        padding: 4.5rem 2rem;
+      }
+
+      section h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-  <h1>Lic. Diego Valenzuela</h1>
-  <p>
-    Atención psicológica online con enfoque psicoanalítico.
-    Un espacio de escucha profesional, confidencial y respetuoso de los tiempos subjetivos.
-  </p>
-  <a class="btn" href="https://wa.me/549XXXXXXXXXX" target="_blank">
-    Agendar primera consulta
-  </a>
+  <h1>Lic. Diego Valenzuela</h1>
+  <p>
+    Atención psicológica online con enfoque psicoanalítico.
+    Un espacio de escucha profesional, confidencial y respetuoso de los tiempos subjetivos.
+  </p>
+  <a class="btn" href="https://wa.me/549XXXXXXXXXX" target="_blank">
+    Agendar primera consulta
+  </a>
 </header>
 
 <section>
-  <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80"
-       alt="Paisaje sereno"
-       style="width:100%; border-radius:12px; margin-bottom:2rem;">
+  <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80" alt="Paisaje sereno">
+  <h2>En qué puedo acompañarte</h2>
 
-  <h2>En qué puedo acompañarte</h2>
+  <div class="accordion">
+    <details>
+      <summary>Ansiedad y angustia</summary>
+      <p>
+        Formas de malestar que irrumpen en el cuerpo o el pensamiento,
+        muchas veces sin una causa consciente clara.
+      </p>
+    </details>
 
-  <div class="accordion">
-    <details>
-      <summary>Ansiedad y angustia</summary>
-      <p>
-        Manifestaciones de malestar que pueden expresarse a través del cuerpo,
-        el pensamiento o la conducta, muchas veces sin una causa consciente clara.
-      </p>
-    </details>
+    <details>
+      <summary>Crisis vitales</summary>
+      <p>
+        Momentos de quiebre, decisiones o cambios que interpelan
+        los modos habituales de sostener la vida.
+      </p>
+    </details>
 
-    <details>
-      <summary>Crisis vitales</summary>
-      <p>
-        Momentos de quiebre, cambios o decisiones que ponen en cuestión los modos habituales
-        de sostener la vida subjetiva.
-      </p>
-    </details>
-
-    <details>
-      <summary>Duelo y pérdidas</summary>
-      <p>
-        Procesos singulares de elaboración frente a pérdidas afectivas,
-        separaciones o transformaciones significativas.
-      </p>
-    </details>
-  </div>
+    <details>
+      <summary>Duelo y pérdidas</summary>
+      <p>
+        Procesos singulares de elaboración frente a pérdidas,
+        separaciones o transformaciones significativas.
+      </p>
+    </details>
+  </div>
 </section>
 
-<section class="sobre-mi">
-  <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80"
-       alt="Escritura y reflexión"
-       style="width:100%; border-radius:12px; margin-bottom:2rem;">
-
-  <h2>Sobre mí</h2>
-
-  <p>
-    Soy Licenciado en Psicología, con formación en psicoanálisis y experiencia clínica
-    en el ámbito hospitalario.
-  </p>
-
-  <p>
-    Concibo el espacio terapéutico como un lugar de escucha profesional,
-    sin juicios ni directivas, donde cada persona pueda decir algo de su padecer
-    y construir un modo singular de abordarlo.
-  </p>
+<section class="box">
+  <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80" alt="Notas y reflexión">
+  <h2>Sobre mí</h2>
+  <p>
+    Soy Licenciado en Psicología, con formación en psicoanálisis y experiencia clínica
+    en el ámbito hospitalario.
+  </p>
+  <p>
+    Concibo el espacio terapéutico como un lugar de escucha,
+    sin juicios ni directivas, donde cada sujeto pueda decir algo
+    de su padecer y encontrar un modo singular de abordarlo.
+  </p>
 </section>
 
-<section class="modalidad">
-  <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80"
-       alt="Modalidad online"
-       style="width:100%; border-radius:12px; margin-bottom:2rem;">
-
-  <h2>Modalidad de atención</h2>
-
-  <p>
-    • Atención 100% online<br>
-    • Sesiones individuales<br>
-    • Duración aproximada: 45 minutos<br>
-    • Frecuencia a acordar según cada proceso
-  </p>
-</section>
-
-<!-- BLOG -->
-<section>
-  <h2>Blog / Artículos</h2>
-
-  <p>
-    Un espacio de lectura y reflexión clínica sobre el malestar contemporáneo,
-    los vínculos y los tiempos subjetivos.
-  </p>
-
-  <a class="btn" href="blog.html">
-    Ver artículos
-  </a>
+<section class="box">
+  <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80" alt="Modalidad online">
+  <h2>Modalidad de atención</h2>
+  <p>
+    • Atención 100% online<br>
+    • Sesiones individuales<br>
+    • Duración aproximada: 45 minutos<br>
+    • Frecuencia a acordar según cada proceso
+  </p>
 </section>
 
 <section>
-  <h2>Preguntas frecuentes</h2>
-
-  <div class="accordion">
-    <details>
-      <summary>¿La atención online es efectiva?</summary>
-      <p>
-        Sí. El dispositivo online permite sostener el encuadre clínico y el trabajo analítico,
-        preservando la confidencialidad y la continuidad del proceso.
-      </p>
-    </details>
-
-    <details>
-      <summary>¿Cómo se define el valor de la sesión?</summary>
-      <p>
-        El valor se conversa de manera personal en el primer contacto,
-        teniendo en cuenta el encuadre y las condiciones del tratamiento.
-      </p>
-    </details>
-
-    <details>
-      <summary>¿Es confidencial el espacio?</summary>
-      <p>
-        Absolutamente. Todo lo trabajado en sesión se encuentra protegido
-        por el secreto profesional.
-      </p>
-    </details>
-  </div>
+  <h2>Blog / Artículos</h2>
+  <p>
+    Textos de divulgación clínica sobre el malestar contemporáneo,
+    los vínculos y la experiencia subjetiva.
+  </p>
+  <a class="btn" href="blog.html">Ver artículos</a>
 </section>
 
 <section>
-  <h2>Contacto</h2>
+  <h2>Preguntas frecuentes</h2>
 
-  <p>
-    Si sentís que este espacio puede ayudarte,
-    podés escribirme para coordinar una primera entrevista.
-  </p>
+  <div class="accordion">
+    <details>
+      <summary>¿La atención online es efectiva?</summary>
+      <p>
+        Sí. El dispositivo online permite sostener el encuadre clínico
+        y el trabajo analítico respetando la confidencialidad.
+      </p>
+    </details>
 
-  <a class="btn" href="https://wa.me/549XXXXXXXXXX" target="_blank">
-    Contactar por WhatsApp
-  </a>
+    <details>
+      <summary>¿Cómo se define el valor de la sesión?</summary>
+      <p>
+        El valor se conversa de manera personal en el primer contacto,
+        considerando las condiciones del tratamiento.
+      </p>
+    </details>
+
+    <details>
+      <summary>¿Es confidencial el espacio?</summary>
+      <p>
+        Todo el material trabajado en sesión está protegido
+        por el secreto profesional.
+      </p>
+    </details>
+  </div>
+</section>
+
+<section>
+  <h2>Contacto</h2>
+  <p>
+    Si sentís que este espacio puede ayudarte,
+    podés escribirme para coordinar una primera entrevista.
+  </p>
+  <a class="btn" href="https://wa.me/549XXXXXXXXXX" target="_blank">
+    Contactar por WhatsApp
+  </a>
 </section>
 
 <footer>
-  <p>Lic. Diego Valenzuela – Psicología Online</p>
-  <p>Matrícula profesional · Atención confidencial · Enfoque psicoanalítico</p>
+  <p>Lic. Diego Valenzuela – Psicología Online</p>
+  <p>Matrícula profesional · Atención confidencial · Enfoque psicoanalítico</p>
 </footer>
 
 </body>
