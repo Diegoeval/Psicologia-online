@@ -1,27 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Psicología Online | Lic. Diego Valenzuela</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lic. Diego Valenzuela | Psicología Online</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    body {
+    :root {
+      --principal: #2f3e46;
+      --secundario: #52796f;
+      --claro: #f4f6f5;
+      --texto: #1f2933;
+      --gris: #6b7280;
+    }
+
+    * {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--claro);
+      color: var(--texto);
       line-height: 1.6;
-      color: #2f3e46;
-      background-color: #f8f9fa;
     }
 
     header {
-      background-image:
-        linear-gradient(
-          135deg,
-          rgba(47,62,70,0.85),
-          rgba(82,121,111,0.85)
-        ),
-        url('https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=1600&q=80');
+      background-image: linear-gradient(
+        135deg,
+        rgba(47,62,70,0.85),
+        rgba(82,121,111,0.85)
+      ),
+      url('https://images.unsplash.com/photo-1580281657527-47f249e8f6c5?auto=format&fit=crop&w=1600&q=80');
       background-size: cover;
       background-position: center;
       color: white;
@@ -31,77 +47,111 @@
 
     header h1 {
       font-size: 2.2rem;
+      font-weight: 500;
       margin-bottom: 1rem;
     }
 
     header p {
-      font-size: 1.1rem;
-      max-width: 700px;
-      margin: 0 auto;
+      max-width: 680px;
+      margin: auto;
+      font-size: 1.05rem;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background-color: white;
+      color: var(--principal);
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 500;
     }
 
     section {
-      padding: 3rem 1.5rem;
       max-width: 900px;
       margin: auto;
+      padding: 3rem 1.5rem;
     }
 
-    section h2 {
-      color: #354f52;
-      margin-bottom: 1rem;
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      color: var(--principal);
+    }
+
+    .accordion {
+      border-top: 1px solid #d1d5db;
+    }
+
+    details {
+      border-bottom: 1px solid #d1d5db;
+      padding: 1rem 0;
+    }
+
+    summary {
+      font-weight: 500;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    details p {
+      margin-top: 0.75rem;
+      color: var(--gris);
+    }
+
+    .blog-link {
+      display: inline-block;
+      margin-top: 1rem;
+      color: var(--secundario);
+      font-weight: 500;
+      text-decoration: none;
     }
 
     footer {
-      background-color: #2f3e46;
-      color: white;
+      background-color: #1f2933;
+      color: #e5e7eb;
       text-align: center;
-      padding: 1.5rem;
+      padding: 2rem 1.5rem;
       font-size: 0.9rem;
-    }
-
-    @media (max-width: 768px) {
-      header {
-        padding: 3rem 1rem;
-      }
-
-      header h1 {
-        font-size: 1.8rem;
-      }
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Psicología Online</h1>
-    <p>
-      Un espacio de escucha clínica orientado al psicoanálisis.
-      Atención a adolescentes y adultos.
-    </p>
-  </header>
+<header>
+  <h1>Lic. Diego Valenzuela</h1>
+  <p>Atención psicológica online con enfoque psicoanalítico. Un espacio de escucha profesional, confidencial y respetuoso de los tiempos subjetivos.</p>
+  <a class="btn" href="https://wa.me/549XXXXXXXXXX">Agendar primera consulta</a>
+</header>
 
-  <section>
-    <h2>¿En qué puedo acompañarte?</h2>
-    <p>
-      La práctica psicoanalítica propone un espacio para poner en palabras
-      aquello que genera malestar, angustia o repetición. El trabajo clínico
-      se orienta a partir de la singularidad de cada sujeto.
-    </p>
-  </section>
+<section>
+  <h2>Blog / Artículos</h2>
+  <p>Espacio de divulgación clínica donde desarrollo reflexiones sobre el malestar contemporáneo desde una perspectiva psicoanalítica.</p>
 
-  <section>
-    <h2>Modalidad de atención</h2>
-    <p>
-      Atención online mediante videollamada, con un encuadre claro y
-      respetando la confidencialidad. Una modalidad que permite sostener
-      el trabajo clínico más allá de la distancia.
-    </p>
-  </section>
+  <div class="accordion">
+    <details>
+      <summary>La repetición en la clínica psicoanalítica</summary>
+      <p>Cuando ciertos modos de sufrir se reiteran, el psicoanálisis propone escuchar qué insiste más allá de la voluntad.</p>
+      <a class="blog-link" href="articulo1.html">Leer artículo</a>
+    </details>
 
-  <footer>
-    © Lic. Diego Valenzuela – Psicología Online
-  </footer>
+    <details>
+      <summary>La ansiedad y el tiempo subjetivo</summary>
+      <p>Una lectura clínica sobre la urgencia, la espera y el malestar en la vida contemporánea.</p>
+      <a class="blog-link" href="articulo2.html">Leer artículo</a>
+    </details>
+  </div>
+
+  <a class="blog-link" href="blog.html">Ver todos los artículos →</a>
+</section>
+
+<footer>
+  <p>Lic. Diego Valenzuela – Psicología Online</p>
+  <p>Matrícula profesional visible · Atención confidencial · Enfoque psicoanalítico</p>
+</footer>
 
 </body>
 </html>
