@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cuando alguien muere por suicidio: el duelo, la culpa y aquello que queda | Lic. Diego Valenzuela</title>
+
+  <meta name="description"
+        content="Una reflexión psicoanalítica sobre el duelo por suicidio, la culpa de quienes quedan y la representación de la persona que ya no está.">
+
+  <!-- Fuente -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    :root {
+      --principal: #2f3e46;
+      --secundario: #52796f;
+      --fondo: #f4f6f5;
+      --texto: #1f2933;
+      --gris: #6b7280;
+      --blanco: #ffffff;
+    }
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--fondo);
+      color: var(--texto);
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+
+    /* =========================
+       ENCABEZADO
+       ========================= */
+
+    header {
+
+      background-image:
+        linear-gradient(
+          rgba(47, 62, 70, 0.88),
+          rgba(82, 121, 111, 0.88)
+        ),
+        url("https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=1600&q=80");
+
+      background-size: cover;
+      background-position: center;
+
+      color: white;
+
+      text-align: center;
+
+      padding: 4rem 1.3rem;
+    }
+
+
+    header h1 {
+
+      font-size: 1.8rem;
+
+      font-weight: 500;
+
+      line-height: 1.35;
+
+      max-width: 850px;
+
+      margin: auto;
+    }
+
+
+    header p {
+
+      margin-top: 1rem;
+
+      font-size: 0.95rem;
+
+      font-weight: 300;
+
+      opacity: 0.92;
+    }
+
+
+    /* =========================
+       CONTENIDO
+       ========================= */
+
+    main {
+
+      width: 100%;
+
+      max-width: 820px;
+
+      margin: auto;
+
+      padding: 3rem 1.3rem;
+    }
+
+
+    article {
+
+      background-color: var(--blanco);
+
+      padding: 2rem 1.5rem;
+
+      border-radius: 14px;
+
+      box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.05);
+    }
+
+
+    /* =========================
+       SUBTÍTULOS
+       ========================= */
+
+    article h2 {
+
+      color: var(--principal);
+
+      font-size: 1.35rem;
+
+      font-weight: 500;
+
+      line-height: 1.4;
+
+      margin-top: 2.5rem;
+
+      margin-bottom: 1rem;
+    }
+
+
+    article h2:first-child {
+
+      margin-top: 0;
+    }
+
+
+    /* =========================
+       TEXTO
+       ========================= */
+
+    article p {
+
+      font-size: 0.98rem;
+
+      color: #374151;
+
+      margin-bottom: 1.3rem;
+    }
+
+
+    /* =========================
+       PREGUNTAS DESTACADAS
+       ========================= */
+
+    .preguntas {
+
+      margin: 1.5rem 0 2rem 0;
+
+      padding-left: 1.2rem;
+
+      border-left: 3px solid var(--secundario);
+    }
+
+
+    .preguntas p {
+
+      margin-bottom: 0.35rem;
+
+      color: var(--principal);
+
+      font-style: italic;
+    }
+
+
+    /* =========================
+       FRASES DESTACADAS
+       ========================= */
+
+    blockquote {
+
+      border-left: 3px solid var(--secundario);
+
+      margin: 2rem 0;
+
+      padding: 1rem 1.2rem;
+
+      background-color: #f7f9f8;
+
+      color: var(--principal);
+
+      font-size: 1.05rem;
+
+      font-style: italic;
+    }
+
+
+    /* =========================
+       FIRMA
+       ========================= */
+
+    .firma {
+
+      margin-top: 3rem;
+
+      padding-top: 1.5rem;
+
+      border-top: 1px solid #e5e7eb;
+
+      text-align: center;
+
+      color: var(--gris);
+    }
+
+
+    .firma strong {
+
+      color: var(--principal);
+
+      font-weight: 500;
+    }
+
+
+    /* =========================
+       VOLVER
+       ========================= */
+
+    .volver {
+
+      display: block;
+
+      margin-top: 2rem;
+
+      text-align: center;
+
+      color: var(--secundario);
+
+      text-decoration: none;
+
+      font-size: 0.9rem;
+
+      font-weight: 500;
+    }
+
+
+    .volver:hover {
+
+      text-decoration: underline;
+    }
+
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    footer {
+
+      background-color: var(--principal);
+
+      color: #e5e7eb;
+
+      text-align: center;
+
+      padding: 2rem 1.2rem;
+
+      font-size: 0.82rem;
+    }
+
+
+    footer p {
+
+      margin-bottom: 0.4rem;
+    }
+
+
+    /* =========================
+       MOBILE
+       ========================= */
+
+    @media (max-width: 600px) {
+
+      header {
+
+        padding: 3.5rem 1.2rem;
+      }
+
+
+      header h1 {
+
+        font-size: 1.6rem;
+      }
+
+
+      header p {
+
+        font-size: 0.92rem;
+      }
+
+
+      main {
+
+        padding: 2rem 1rem;
+      }
+
+
+      article {
+
+        padding: 1.6rem;
+
+        border-radius: 12px;
+      }
+
+
+      article h2 {
+
+        font-size: 1.25rem;
+      }
+
+
+      article p {
+
+        font-size: 0.93rem;
+      }
+
+
+      blockquote {
+
+        font-size: 0.98rem;
+
+        padding: 0.9rem 1rem;
+      }
+
+    }
+
+
+    /* =========================
+       TABLET / DESKTOP
+       ========================= */
+
+    @media (min-width: 768px) {
+
+      header {
+
+        padding: 5rem 2rem;
+      }
+
+
+      header h1 {
+
+        font-size: 2.2rem;
+      }
+
+
+      article {
+
+        padding: 3rem;
+      }
+
+
+      article h2 {
+
+        font-size: 1.5rem;
+      }
+
+
+      article p {
+
+        font-size: 1rem;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       ENCABEZADO
+       ========================= -->
+
+  <header>
+
+    <h1>
+      Cuando alguien muere por suicidio:
+      el duelo, la culpa y aquello que queda
+    </h1>
+
+    <p>
+      Una reflexión desde una perspectiva psicoanalítica
+    </p>
+
+  </header>
+
+
+
+  <!-- =========================
+       ARTÍCULO
+       ========================= -->
+
+  <main>
+
+    <article>
+
+
+      <!-- INTRODUCCIÓN -->
+
+      <p>
+        Hay pérdidas que dejan una ausencia.
+        Y hay pérdidas que, además de la ausencia, dejan preguntas.
+      </p>
+
+      <p>
+        Cuando una persona muere por suicidio, quienes quedan pueden
+        encontrarse atravesados por interrogantes que parecen no tener respuesta:
+      </p>
+
+
+      <div class="preguntas">
+
+        <p>¿Por qué no me di cuenta?</p>
+
+        <p>¿Podría haber hecho algo?</p>
+
+        <p>¿Por qué no me lo dijo?</p>
+
+        <p>¿Qué hice mal?</p>
+
+        <p>¿Qué podría haber hecho diferente?</p>
+
+      </div>
+
+
+      <p>
+        La muerte puede entonces quedar acompañada por una pregunta
+        que se repite una y otra vez.
+        Y muchas veces esa pregunta termina dirigiéndose hacia uno mismo.
+      </p>
+
+
+
+      <!-- SECCIÓN 1 -->
+
+      <h2>
+        La culpa de quien queda
+      </h2>
+
+      <p>
+        Después de un suicidio puede aparecer una forma particular de culpa.
+        El familiar puede reconstruir conversaciones, encuentros y situaciones
+        anteriores a la muerte buscando algún signo que no pudo reconocer.
+      </p>
+
+      <p>
+        Una frase, un llamado que no atendió, una discusión, un momento
+        en el que podría haber estado más cerca, etc.
+      </p>
+
+      <p>
+        La mente intenta volver sobre la historia como si, encontrando
+        el momento exacto en que algo podría haberse hecho diferente,
+        fuera posible modificar retrospectivamente lo ocurrido.
+      </p>
+
+      <p>
+        Pero el duelo no siempre busca solamente comprender.
+      </p>
+
+      <p>
+        A veces intenta, mediante la culpa, recuperar una sensación de
+        control frente a algo que resulta insoportablemente difícil de aceptar.
+      </p>
+
+      <p>
+        Pensar “podría haberlo evitado” puede ser doloroso, pero también
+        puede ofrecer una explicación allí donde existe una realidad mucho
+        más difícil de soportar: que hubo algo en el otro que no pudo ser
+        completamente conocido ni controlado.
+      </p>
+
+      <p>
+        Esto no significa que la culpa desaparezca al comprenderlo.
+      </p>
+
+      <p>
+        La culpa puede persistir incluso cuando la razón sabe que una persona
+        no puede hacerse responsable de aquello que desconocía, de aquello
+        que el otro no pudo decir o de aquello que excedía sus posibilidades
+        de intervención.
+      </p>
+
+
+
+      <!-- SECCIÓN 2 -->
+
+      <h2>
+        La pregunta que no encuentra respuesta
+      </h2>
+
+      <p>
+        Una de las particularidades de este duelo puede estar relacionada
+        con la imposibilidad de cerrar completamente la historia.
+      </p>
+
+      <p>
+        La muerte produce una interrupción.
+        Pero en el caso del suicidio, esa interrupción puede quedar
+        acompañada por una necesidad intensa de reconstruir un sentido.
+      </p>
+
+      <div class="preguntas">
+
+        <p>¿Por qué?</p>
+
+        <p>¿Qué estaba ocurriendo?</p>
+
+        <p>¿Qué significaba aquello que dijo?</p>
+
+        <p>¿Había señales?</p>
+
+        <p>¿Las podría haber visto?</p>
+
+        <p>¿No quisimos verlas?</p>
+
+      </div>
+
+      <p>
+        El familiar puede quedar entonces atrapado en una especie de
+        investigación retrospectiva.
+      </p>
+
+      <p>
+        Volver sobre el pasado una y otra vez.
+      </p>
+
+      <p>
+        No necesariamente porque exista una respuesta escondida que pueda
+        encontrarse, sino porque aceptar que quizás nunca se tendrá una
+        respuesta completa forma parte de lo más doloroso del duelo.
+      </p>
+
+
+
+      <!-- SECCIÓN 3 -->
+
+      <h2>
+        La persona que murió y la representación que queda
+      </h2>
+
+      <p>
+        Pero en un duelo no desaparece simplemente la relación con quien murió.
+      </p>
+
+      <p>
+        La persona continúa existiendo de otra manera en la vida psíquica
+        de quienes la conocieron.
+      </p>
+
+      <p>
+        Aparece en recuerdos, en fotografías, en frases, en objetos,
+        en determinados lugares, en gestos que pertenecían a esa persona,
+        en escenas que vuelven inesperadamente.
+      </p>
+
+      <p>
+        La representación de quien murió puede transformarse con el tiempo.
+      </p>
+
+      <p>
+        Y cuando la muerte fue por suicidio, esa representación puede quedar
+        atravesada por la manera en que ocurrió la muerte.
+      </p>
+
+      <p>
+        El recuerdo de la persona puede quedar, por momentos, eclipsado
+        por el acontecimiento final.
+      </p>
+
+      <p>
+        Alguien puede comenzar a preguntarse si debe recordar a esa persona
+        por cómo vivió o por cómo murió.
+      </p>
+
+      <p>
+        Y quizás allí aparezca una de las tareas más complejas del duelo:
+      </p>
+
+      <blockquote>
+        Poder recuperar la multiplicidad de una vida que corre el riesgo
+        de quedar reducida a su último acto.
+      </blockquote>
+
+      <p>
+        La persona que murió no es solamente la forma en que murió.
+      </p>
+
+      <p>
+        También fue hijo, hija, hermano, hermana, padre, madre, pareja,
+        amigo, compañero.
+      </p>
+
+      <p>
+        Tuvo una historia, deseos, contradicciones, momentos de alegría,
+        conflictos, vínculos y palabras.
+      </p>
+
+      <p>
+        Una vida que no puede quedar completamente representada por
+        el acontecimiento de su muerte.
+      </p>
+
+
+
+      <!-- SECCIÓN 4 -->
+
+      <h2>
+        La persona que ya no está también puede quedar atrapada en la culpa
+      </h2>
+
+      <p>
+        A veces la culpa modifica incluso la manera de recordar.
+      </p>
+
+      <p>
+        Un familiar puede sentir que recordar momentos felices es una forma
+        de traicionar el dolor.
+      </p>
+
+      <p>
+        O puede aparecer enojo hacia quien murió, y después, culpa por sentir
+        ese enojo.
+      </p>
+
+      <p>
+        Puede existir amor y enojo al mismo tiempo.
+        Extrañar y estar enojado.
+        Comprender algunas cosas y no comprender otras.
+        Querer recordar y, al mismo tiempo, querer dejar de pensar.
+      </p>
+
+      <p>
+        Estas contradicciones no necesariamente indican que el vínculo
+        haya sido menos amoroso.
+      </p>
+
+      <p>
+        Pueden formar parte de la complejidad del duelo.
+      </p>
+
+      <p>
+        Porque la relación con quien murió no desaparece junto con la persona.
+        Se transforma.
+      </p>
+
+
+
+      <!-- SECCIÓN 5 -->
+
+      <h2>
+        ¿Qué hacemos con aquello que no pudo decirse?
+      </h2>
+
+      <p>
+        En muchos duelos quedan palabras pendientes.
+        Preguntas que ya no pueden formularse, respuestas que ya no
+        podrán escucharse.
+      </p>
+
+      <p>
+        Disculpas que no llegaron, enojos que quedaron suspendidos.
+      </p>
+
+      <p>
+        Y quizás una de las dificultades más grandes sea aceptar que algunas
+        de esas palabras permanecerán sin respuesta.
+        Que algunas palabras jamás serán, o jamás podrán llegar a ser...
+      </p>
+
+      <p>
+        El trabajo clínico no puede devolver esas respuestas.
+      </p>
+
+      <p>
+        Tampoco puede reconstruir exactamente aquello que ocurrió.
+      </p>
+
+      <p>
+        Pero puede ofrecer un espacio donde esas preguntas puedan ser dichas.
+      </p>
+
+      <p>
+        Donde la culpa pueda ser interrogada.
+      </p>
+
+      <p>
+        Donde pueda aparecer el enojo.
+      </p>
+
+      <p>
+        Donde pueda hablarse del amor, pero también de aquello que resultó
+        insoportable del vínculo.
+      </p>
+
+
+
+      <!-- SECCIÓN 6 -->
+
+      <h2>
+        Recordar sin quedar reducido a la muerte
+      </h2>
+
+      <p>
+        Con el tiempo, quizás sea posible que la representación de quien murió
+        pueda adquirir nuevamente otros matices.
+      </p>
+
+      <p>
+        Que la persona pueda volver a aparecer en el recuerdo no solamente
+        desde su muerte, sino también desde su historia.
+      </p>
+
+      <p>
+        Esto no significa olvidar cómo murió, ni negar lo ocurrido.
+      </p>
+
+      <p>
+        Significa poder hacer lugar a algo más amplio:
+        a la persona que existió antes de ese acontecimiento,
+        a los vínculos que construyó, a lo que dejó en quienes la conocieron.
+      </p>
+
+      <p>
+        A aquello que permanece como recuerdo y como marca.
+      </p>
+
+      <p>
+        Porque elaborar un duelo no significa encontrar una explicación
+        definitiva.
+      </p>
+
+      <p>
+        A veces significa poder vivir con una pregunta que no tendrá
+        una respuesta completa.
+      </p>
+
+      <p>
+        Y, especialmente, poder dejar de ocupar el lugar imposible de
+        quien tendría que haber sabido, previsto o salvado.
+      </p>
+
+      <blockquote>
+        Quien queda no tiene que convertirse en responsable de explicar
+        retrospectivamente una vida que no podía conocer por completo.
+      </blockquote>
+
+      <p>
+        El duelo puede abrir, lentamente, la posibilidad de recordar a quien
+        murió sin que su muerte ocupe todo el lugar de su existencia.
+      </p>
+
+      <p>
+        Y quizás allí comience una transformación de la ausencia:
+      </p>
+
+      <p>
+        la persona ya no está en la realidad cotidiana, pero puede continuar
+        teniendo un lugar en la historia de quienes la amaron,
+        sin quedar reducida al modo en que murió.
+      </p>
+
+
+
+      <!-- FIRMA -->
+
+      <div class="firma">
+
+        <p>
+          <strong>Lic. Diego Valenzuela</strong>
+        </p>
+
+        <p>
+          Psicología · Enfoque Psicoanalítico
+        </p>
+
+      </div>
+
+
+    </article>
+
+
+    <!-- VOLVER AL BLOG -->
+
+    <a class="volver" href="blog.html">
+      ← Volver al Blog / Artículos
+    </a>
+
+
+  </main>
+
+
+
+  <!-- =========================
+       FOOTER
+       ========================= -->
+
+  <footer>
+
+    <p>
+      Lic. Diego Valenzuela – Psicología Online
+    </p>
+
+    <p>
+      Matrícula profesional · Atención confidencial · Enfoque psicoanalítico
+    </p>
+
+  </footer>
+
+
+</body>
+
+</html>
