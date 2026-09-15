@@ -20,7 +20,6 @@
        ========================= -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
@@ -515,7 +514,7 @@
 
     .modalidad {
 
-      background: var(--blanco);
+      background: var(--fondo);
 
     }
 
@@ -527,6 +526,19 @@
       grid-template-columns: 1fr;
 
       gap: 1rem;
+
+    }
+
+
+    .modalidad-layout {
+
+      display: grid;
+
+      grid-template-columns: 1fr;
+
+      gap: 2rem;
+
+      align-items: center;
 
     }
 
@@ -581,11 +593,7 @@
     }
 
 
-    /* =========================
-       IMÁGENES DE SECCIÓN
-       ========================= */
-
-    .section-image {
+    .modalidad-image {
 
       border-radius: 16px;
 
@@ -596,11 +604,13 @@
     }
 
 
-    .section-image img {
+    .modalidad-image img {
 
       height: 330px;
 
       object-fit: cover;
+
+      object-position: center;
 
     }
 
@@ -611,7 +621,7 @@
 
     .blog {
 
-      background: var(--fondo);
+      background: var(--blanco);
 
     }
 
@@ -629,6 +639,8 @@
       border-radius: 16px;
 
       box-shadow: var(--sombra);
+
+      border: 1px solid var(--borde);
 
     }
 
@@ -807,11 +819,11 @@
 
     .contacto {
 
-      background: var(--blanco);
-
       padding-top: 4rem;
 
       padding-bottom: 5rem;
+
+      background: var(--blanco);
 
     }
 
@@ -956,6 +968,8 @@
       height: 330px;
 
       object-fit: cover;
+
+      object-position: center;
 
     }
 
@@ -1112,6 +1126,14 @@
       }
 
 
+      .modalidad-layout {
+
+        grid-template-columns:
+          1.05fr 0.95fr;
+
+      }
+
+
       .blog-card {
 
         grid-template-columns:
@@ -1149,7 +1171,7 @@
       }
 
 
-      .section-image img {
+      .modalidad-image img {
 
         height: 430px;
 
@@ -1227,6 +1249,7 @@
         scroll-behavior: auto;
 
       }
+
 
       * {
 
@@ -1341,7 +1364,6 @@
         </article>
 
 
-
         <article class="card">
 
           <div class="card-number">
@@ -1358,7 +1380,6 @@
           </p>
 
         </article>
-
 
 
         <article class="card">
@@ -1395,10 +1416,10 @@
 
     <div class="container">
 
-      <div class="about-grid">
+      <div class="modalidad-layout">
 
 
-        <div class="about-text">
+        <div>
 
           <div class="section-heading">
 
@@ -1473,7 +1494,7 @@
         </div>
 
 
-        <div class="section-image">
+        <div class="modalidad-image">
 
           <img
             src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=85"
@@ -1493,7 +1514,7 @@
 
 
   <!-- =========================
-       BLOG
+       BLOG / ARTÍCULOS
        ========================= -->
 
   <section class="blog">
@@ -1522,4 +1543,290 @@
       <div class="blog-card">
 
 
- 
+        <div class="blog-image"></div>
+
+
+        <div class="blog-content">
+
+          <h3>
+            Reflexiones desde el psicoanálisis
+          </h3>
+
+          <p>
+            Artículos sobre ansiedad, vínculos, repetición, malestar,
+            pérdidas y diferentes formas en que aquello que nos pasa
+            puede presentarse en la vida cotidiana.
+          </p>
+
+          <a
+            class="btn"
+            href="blog.html"
+          >
+            Ver artículos →
+          </a>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       FAQ
+       ========================= -->
+
+  <section class="faq">
+
+    <div class="container">
+
+
+      <div class="section-heading">
+
+        <span class="section-label">
+          Preguntas frecuentes
+        </span>
+
+        <h2>
+          Antes de comenzar
+        </h2>
+
+      </div>
+
+
+      <div class="faq-list">
+
+
+        <details>
+
+          <summary>
+            ¿La terapia online es efectiva?
+          </summary>
+
+          <div class="faq-answer">
+
+            <p>
+              La atención psicológica online permite desarrollar un espacio
+              clínico de escucha y trabajo terapéutico manteniendo la
+              privacidad y continuidad del proceso.
+            </p>
+
+          </div>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            ¿Tengo que estar atravesando un problema grave para consultar?
+          </summary>
+
+          <div class="faq-answer">
+
+            <p>
+              No es necesario. Muchas veces una consulta comienza a partir
+              de un malestar que resulta difícil de nombrar, una situación
+              que genera angustia o la sensación de que algo ya no funciona
+              como antes.
+            </p>
+
+          </div>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            ¿Cómo es la primera entrevista?
+          </summary>
+
+          <div class="faq-answer">
+
+            <p>
+              Es un primer encuentro para poder hablar sobre aquello que
+              motiva la consulta, conocer la situación y pensar juntos
+              cómo continuar el proceso.
+            </p>
+
+          </div>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            ¿Cuál es el valor de la sesión?
+          </summary>
+
+          <div class="faq-answer">
+
+            <p>
+              El valor de la sesión se informa al momento de realizar
+              la consulta inicial.
+            </p>
+
+          </div>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            ¿La consulta es confidencial?
+          </summary>
+
+          <div class="faq-answer">
+
+            <p>
+              Sí. El espacio de consulta se encuentra sujeto al deber
+              de confidencialidad profesional correspondiente al ejercicio
+              de la psicología.
+            </p>
+
+          </div>
+
+        </details>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       CONTACTO
+       ========================= -->
+
+  <section class="contacto">
+
+    <div class="container">
+
+      <div class="contact-box">
+
+        <h2>
+          Si algo de esto te está pasando,
+          podemos hablar.
+        </h2>
+
+        <p>
+          Podés escribirme para realizar una primera consulta
+          y conocer la modalidad de atención.
+        </p>
+
+        <a
+          class="btn"
+          href="https://wa.me/5491144400733"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Contactarme por WhatsApp →
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       SOBRE MÍ
+       ========================= -->
+
+  <section class="sobre-mi">
+
+    <div class="container">
+
+      <div class="about-grid">
+
+
+        <div class="about-image">
+
+          <img
+            src="foto_apaisada.png"
+            alt="Espacio de reflexión y formación psicoanalítica"
+            loading="lazy"
+          >
+
+        </div>
+
+
+        <div class="about-text">
+
+          <div class="section-heading">
+
+            <span class="section-label">
+              Sobre mí
+            </span>
+
+            <h2>
+              Un espacio para hablar de aquello que te pasa
+            </h2>
+
+          </div>
+
+
+          <p>
+            Soy Licenciado en Psicología, con formación en psicoanálisis
+            y experiencia clínica en el ámbito hospitalario.
+          </p>
+
+
+          <p>
+            Concibo el espacio terapéutico como un lugar de escucha profesional,
+            sin juicios ni directivas, donde cada persona pueda decir algo de
+            su padecer y construir un modo singular de abordarlo.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       FOOTER
+       ========================= -->
+
+  <footer>
+
+    <p>
+      Lic. Diego Valenzuela – Psicología Online
+    </p>
+
+    <p>
+      Matrícula profesional · Atención confidencial · Enfoque psicoanalítico
+    </p>
+
+    <a
+      class="instagram-link"
+      href="https://www.instagram.com/lic.diegovalenzuela/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Instagram · @lic.diegovalenzuela
+    </a>
+
+  </footer>
+
+
+</body>
+
+</html>
