@@ -347,6 +347,19 @@
     }
 
 
+    .modalidad-image {
+      width: 100%;
+
+      height: 280px;
+
+      object-fit: cover;
+
+      border-radius: 16px;
+
+      margin-bottom: 2rem;
+    }
+
+
     .modalidad-grid {
       display: grid;
 
@@ -488,6 +501,79 @@
 
 
     /* =========================
+       FAQ
+    ========================= */
+
+    .faq-list {
+      max-width: 800px;
+    }
+
+
+    details {
+      background: var(--blanco);
+
+      border: 1px solid var(--borde);
+
+      border-radius: 12px;
+
+      margin-bottom: 0.8rem;
+
+      overflow: hidden;
+    }
+
+
+    summary {
+      cursor: pointer;
+
+      list-style: none;
+
+      padding: 1.2rem 1.3rem;
+
+      font-weight: 600;
+
+      color: var(--oscuro);
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 1rem;
+    }
+
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+
+    summary::after {
+      content: "+";
+
+      font-size: 1.3rem;
+
+      color: var(--verde);
+
+      flex-shrink: 0;
+    }
+
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+
+    details p {
+      padding: 0 1.3rem 1.3rem;
+
+      color: var(--gris);
+
+      font-size: 0.94rem;
+    }
+
+
+    /* =========================
        BLOG
     ========================= */
 
@@ -560,79 +646,6 @@
       font-weight: 700;
 
       font-size: 0.92rem;
-    }
-
-
-    /* =========================
-       FAQ
-    ========================= */
-
-    .faq-list {
-      max-width: 800px;
-    }
-
-
-    details {
-      background: var(--blanco);
-
-      border: 1px solid var(--borde);
-
-      border-radius: 12px;
-
-      margin-bottom: 0.8rem;
-
-      overflow: hidden;
-    }
-
-
-    summary {
-      cursor: pointer;
-
-      list-style: none;
-
-      padding: 1.2rem 1.3rem;
-
-      font-weight: 600;
-
-      color: var(--oscuro);
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: space-between;
-
-      gap: 1rem;
-    }
-
-
-    summary::-webkit-details-marker {
-      display: none;
-    }
-
-
-    summary::after {
-      content: "+";
-
-      font-size: 1.3rem;
-
-      color: var(--verde);
-
-      flex-shrink: 0;
-    }
-
-
-    details[open] summary::after {
-      content: "−";
-    }
-
-
-    details p {
-      padding: 0 1.3rem 1.3rem;
-
-      color: var(--gris);
-
-      font-size: 0.94rem;
     }
 
 
@@ -814,6 +827,7 @@
     ========================= */
 
     @keyframes aparecer {
+
       from {
         opacity: 0;
         transform: translateY(14px);
@@ -823,6 +837,7 @@
         opacity: 1;
         transform: translateY(0);
       }
+
     }
 
 
@@ -843,6 +858,11 @@
 
 
       .acompanamiento-image {
+        height: 380px;
+      }
+
+
+      .modalidad-image {
         height: 380px;
       }
 
@@ -884,6 +904,7 @@
 
         text-align: left;
       }
+
     }
 
 
@@ -911,6 +932,7 @@
       .contact-box {
         padding: 3.5rem;
       }
+
     }
 
 
@@ -928,13 +950,18 @@
       *,
       *::before,
       *::after {
+
         animation-duration: 0.01ms !important;
+
         animation-iteration-count: 1 !important;
+
         transition-duration: 0.01ms !important;
       }
+
     }
 
   </style>
+
 </head>
 
 
@@ -985,7 +1012,7 @@
 
 
     <!-- =========================
-         ACOMPAÑAMIENTO
+         EN QUÉ PUEDO ACOMPAÑARTE
     ========================= -->
 
     <section>
@@ -1090,19 +1117,13 @@
         </p>
 
 
-        <!-- Imagen ANTES del texto -->
+        <!-- Imagen arriba del contenido -->
 
         <img
+          class="modalidad-image"
           src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=85"
           alt="Modalidad de atención psicológica online"
           loading="lazy"
-          style="
-            width:100%;
-            height:280px;
-            object-fit:cover;
-            border-radius:16px;
-            margin-bottom:2rem;
-          "
         >
 
 
@@ -1173,7 +1194,7 @@
 
 
     <!-- =========================
-         PRIMERA CONSULTA
+         CÓMO ES LA PRIMERA CONSULTA
     ========================= -->
 
     <section class="primera-consulta">
@@ -1250,67 +1271,6 @@
           Es también una oportunidad para conocernos y pensar juntos
           si este espacio resulta adecuado para lo que estás atravesando.
         </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         BLOG
-    ========================= -->
-
-    <section class="blog">
-
-      <div class="container">
-
-        <div class="section-label">
-          Blog
-        </div>
-
-        <h2 class="section-title">
-          Algunas preguntas para pensar
-        </h2>
-
-        <p class="section-intro">
-          Textos sobre malestar, vínculos, ansiedad, pérdidas y distintas
-          experiencias de la vida cotidiana desde una perspectiva
-          psicoanalítica.
-        </p>
-
-
-        <article class="blog-card">
-
-
-          <div
-            class="blog-image"
-            aria-hidden="true"
-          ></div>
-
-
-          <div class="blog-content">
-
-            <h3>
-              La repetición en la clínica psicoanalítica
-            </h3>
-
-            <p>
-              ¿Por qué algunas situaciones parecen repetirse aun cuando
-              sabemos que no nos hacen bien? Una aproximación al concepto
-              de repetición desde el psicoanálisis.
-            </p>
-
-            <a
-              class="blog-link"
-              href="blog.html"
-            >
-              Leer artículos →
-            </a>
-
-          </div>
-
-
-        </article>
 
       </div>
 
@@ -1412,6 +1372,67 @@
 
 
         </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         BLOG
+    ========================= -->
+
+    <section class="blog">
+
+      <div class="container">
+
+        <div class="section-label">
+          Blog
+        </div>
+
+        <h2 class="section-title">
+          Algunas preguntas para pensar
+        </h2>
+
+        <p class="section-intro">
+          Textos sobre malestar, vínculos, ansiedad, pérdidas y distintas
+          experiencias de la vida cotidiana desde una perspectiva
+          psicoanalítica.
+        </p>
+
+
+        <article class="blog-card">
+
+
+          <div
+            class="blog-image"
+            aria-hidden="true"
+          ></div>
+
+
+          <div class="blog-content">
+
+            <h3>
+              La repetición en la clínica psicoanalítica
+            </h3>
+
+            <p>
+              ¿Por qué algunas situaciones parecen repetirse aun cuando
+              sabemos que no nos hacen bien? Una aproximación al concepto
+              de repetición desde el psicoanálisis.
+            </p>
+
+            <a
+              class="blog-link"
+              href="blog.html"
+            >
+              Leer artículos →
+            </a>
+
+          </div>
+
+
+        </article>
 
       </div>
 
