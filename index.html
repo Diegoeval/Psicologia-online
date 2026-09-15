@@ -20,6 +20,7 @@
        ========================= -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
@@ -509,72 +510,6 @@
 
 
     /* =========================
-       SOBRE MÍ
-       ========================= */
-
-    .about-grid {
-
-      display: grid;
-
-      grid-template-columns: 1fr;
-
-      gap: 2rem;
-
-      align-items: center;
-
-    }
-
-
-    .about-image {
-
-      border-radius: 16px;
-
-      overflow: hidden;
-
-      box-shadow: var(--sombra);
-
-    }
-
-
-    .about-image img {
-
-      height: 330px;
-
-      object-fit: cover;
-
-    }
-
-
-    .about-text {
-
-      background: var(--blanco);
-
-      padding: 2rem;
-
-      border-radius: 16px;
-
-      box-shadow: var(--sombra);
-
-    }
-
-
-    .about-text p {
-
-      color: #46515a;
-
-      margin-bottom: 1rem;
-
-    }
-
-
-    .about-text p:last-child {
-
-      margin-bottom: 0;
-
-    }
-
-
-    /* =========================
        MODALIDAD
        ========================= */
 
@@ -647,8 +582,39 @@
 
 
     /* =========================
+       IMÁGENES DE SECCIÓN
+       ========================= */
+
+    .section-image {
+
+      border-radius: 16px;
+
+      overflow: hidden;
+
+      box-shadow: var(--sombra);
+
+    }
+
+
+    .section-image img {
+
+      height: 330px;
+
+      object-fit: cover;
+
+    }
+
+
+    /* =========================
        BLOG
        ========================= */
+
+    .blog {
+
+      background: var(--fondo);
+
+    }
+
 
     .blog-card {
 
@@ -669,22 +635,22 @@
 
     .blog-image {
 
-  min-height: 230px;
+      min-height: 230px;
 
-  background:
+      background:
 
-    linear-gradient(
-      rgba(47,62,70,0.08),
-      rgba(47,62,70,0.08)
-    ),
+        linear-gradient(
+          rgba(47,62,70,0.08),
+          rgba(47,62,70,0.08)
+        ),
 
-    url("consultorio.jpg");
+        url("consultorio.jpg");
 
-  background-size: cover;
+      background-size: cover;
 
-  background-position: center;
+      background-position: center;
 
-}
+    }
 
 
     .blog-content {
@@ -812,8 +778,6 @@
 
       font-weight: 300;
 
-      transition: transform 0.2s ease;
-
     }
 
 
@@ -842,6 +806,8 @@
        ========================= */
 
     .contacto {
+
+      background: var(--blanco);
 
       padding-top: 4rem;
 
@@ -946,6 +912,79 @@
     .contact-box .btn:hover {
 
       background: #f1f5f3;
+
+    }
+
+
+    /* =========================
+       SOBRE MÍ
+       ========================= */
+
+    .sobre-mi {
+
+      background: var(--fondo);
+
+    }
+
+
+    .about-grid {
+
+      display: grid;
+
+      grid-template-columns: 1fr;
+
+      gap: 2rem;
+
+      align-items: center;
+
+    }
+
+
+    .about-image {
+
+      border-radius: 16px;
+
+      overflow: hidden;
+
+      box-shadow: var(--sombra);
+
+    }
+
+
+    .about-image img {
+
+      height: 330px;
+
+      object-fit: cover;
+
+    }
+
+
+    .about-text {
+
+      background: var(--blanco);
+
+      padding: 2rem;
+
+      border-radius: 16px;
+
+      box-shadow: var(--sombra);
+
+    }
+
+
+    .about-text p {
+
+      color: #46515a;
+
+      margin-bottom: 1rem;
+
+    }
+
+
+    .about-text p:last-child {
+
+      margin-bottom: 0;
 
     }
 
@@ -1110,6 +1149,13 @@
       }
 
 
+      .section-image img {
+
+        height: 430px;
+
+      }
+
+
       .contact-box {
 
         padding: 3.5rem 3rem;
@@ -1250,8 +1296,6 @@
     <div class="container">
 
 
-      <!-- IMAGEN ORIGINAL DEL DIVÁN -->
-
       <div class="acompanamiento-image">
 
         <img
@@ -1333,66 +1377,6 @@
           </p>
 
         </article>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =========================
-       SOBRE MÍ
-       ========================= -->
-
-  <section>
-
-    <div class="container">
-
-      <div class="about-grid">
-
-
-        <div class="about-image">
-
-  <img
-    src="foto_apaisada.png"
-    alt="Espacio de reflexión y formación psicoanalítica"
-    loading="lazy"
-  >
-
-</div>
-
-
-        <div class="about-text">
-
-          <div class="section-heading">
-
-            <span class="section-label">
-              Sobre mí
-            </span>
-
-            <h2>
-              Un espacio para hablar de aquello que te pasa
-            </h2>
-
-          </div>
-
-
-          <p>
-            Soy Licenciado en Psicología, con formación en psicoanálisis
-            y experiencia clínica en el ámbito hospitalario.
-          </p>
-
-
-          <p>
-            Concibo el espacio terapéutico como un lugar de escucha profesional,
-            sin juicios ni directivas, donde cada persona pueda decir algo de
-            su padecer y construir un modo singular de abordarlo.
-          </p>
-
-        </div>
 
 
       </div>
@@ -1489,7 +1473,7 @@
         </div>
 
 
-        <div class="about-image">
+        <div class="section-image">
 
           <img
             src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=85"
@@ -1512,7 +1496,7 @@
        BLOG
        ========================= -->
 
-  <section>
+  <section class="blog">
 
     <div class="container">
 
@@ -1527,234 +1511,15 @@
           Blog / Artículos
         </h2>
 
+        <p>
+          Un espacio de lectura y reflexión clínica sobre el malestar
+          contemporáneo, los vínculos y la subjetividad en la actualidad.
+        </p>
+
       </div>
 
 
       <div class="blog-card">
 
 
-        <div class="blog-image"></div>
-
-
-        <div class="blog-content">
-
-          <h3>
-            Un espacio para pensar aquello que nos pasa
-          </h3>
-
-          <p>
-            Un espacio de lectura y reflexión clínica sobre el malestar
-            contemporáneo, los vínculos y la subjetividad en la actualidad.
-          </p>
-
-
-          <a
-            class="btn btn-outline"
-            href="blog.html"
-          >
-            Ver artículos →
-          </a>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =========================
-       PREGUNTAS FRECUENTES
-       ========================= -->
-
-  <section class="faq">
-
-    <div class="container">
-
-
-      <div class="section-heading">
-
-        <span class="section-label">
-          Antes de consultar
-        </span>
-
-        <h2>
-          Preguntas frecuentes
-        </h2>
-
-        <p>
-          Algunas respuestas a preguntas que pueden surgir antes de comenzar
-          un espacio de atención.
-        </p>
-
-      </div>
-
-
-      <div class="faq-list">
-
-
-        <details>
-
-          <summary>
-            ¿La atención psicológica online es efectiva?
-          </summary>
-
-          <div class="faq-answer">
-
-            Sí. La modalidad online permite sostener el encuadre clínico
-            y el trabajo terapéutico, respetando la confidencialidad
-            y la continuidad del proceso.
-
-          </div>
-
-        </details>
-
-
-
-        <details>
-
-          <summary>
-            ¿Necesito tener un problema grave para consultar?
-          </summary>
-
-          <div class="faq-answer">
-
-            No. Muchas consultas surgen a partir de malestares cotidianos,
-            dudas, angustias o situaciones que generan sufrimiento.
-
-          </div>
-
-        </details>
-
-
-
-        <details>
-
-          <summary>
-            ¿Cómo es la primera entrevista?
-          </summary>
-
-          <div class="faq-answer">
-
-            Es un espacio inicial para que puedas decir qué te trae a consultar
-            y para evaluar juntos la modalidad de trabajo. No implica compromiso
-            inmediato.
-
-          </div>
-
-        </details>
-
-
-
-        <details>
-
-          <summary>
-            ¿Cómo se define el valor de la sesión?
-          </summary>
-
-          <div class="faq-answer">
-
-            El valor se conversa de manera personal en el primer contacto,
-            considerando el encuadre y las condiciones del tratamiento.
-
-          </div>
-
-        </details>
-
-
-
-        <details>
-
-          <summary>
-            ¿El espacio es confidencial?
-          </summary>
-
-          <div class="faq-answer">
-
-            Absolutamente. Todo lo trabajado en sesión está protegido
-            por el secreto profesional.
-
-          </div>
-
-        </details>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =========================
-       CONTACTO
-       ========================= -->
-
-  <section class="contacto">
-
-    <div class="container">
-
-
-      <div class="contact-box">
-
-        <h2>
-          Si sentís que este espacio puede ayudarte
-        </h2>
-
-        <p>
-          Podés escribirme para coordinar una primera entrevista.
-        </p>
-
-
-        <a
-          class="btn"
-          href="https://wa.me/5491144400733"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Contactar por WhatsApp →
-        </a>
-
-      </div>
-
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =========================
-       FOOTER
-       ========================= -->
-
-  <footer>
-
-    <p>
-      Lic. Diego Valenzuela – Psicología Online
-    </p>
-
-    <p>
-      Matrícula profesional · Atención confidencial · Enfoque psicoanalítico
-    </p>
-
-
-    <a
-      class="instagram-link"
-      href="https://www.instagram.com/lic.diegovalenzuela/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      @lic.diegovalenzuela
-    </a>
-
-  </footer>
-
-
-</body>
-
-</html>
+ 
