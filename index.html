@@ -75,6 +75,10 @@
     }
 
 
+    /* =========================
+       RESET
+    ========================= */
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -142,6 +146,7 @@
 
     .hero-content {
       max-width: 760px;
+
       padding: 5rem 0;
 
       color: white;
@@ -157,6 +162,7 @@
       margin-bottom: 1.6rem;
 
       border: 1px solid rgba(255,255,255,0.28);
+
       border-radius: 999px;
 
       font-size: 0.76rem;
@@ -207,10 +213,6 @@
       animation-delay: 0.35s;
     }
 
-
-    /*
-      Línea que aparece debajo del nombre
-    */
 
     .hero h1::after {
       content: "";
@@ -268,45 +270,6 @@
     }
 
 
-    .btn {
-      display: inline-flex;
-
-      align-items: center;
-      justify-content: center;
-
-      min-height: 50px;
-
-      padding: 0.8rem 1.3rem;
-
-      border-radius: 8px;
-
-      background: var(--verde);
-
-      color: white;
-
-      font-weight: 600;
-
-      transition:
-        transform 0.2s ease,
-        background 0.2s ease,
-        box-shadow 0.2s ease;
-    }
-
-
-    .btn:hover {
-      background: var(--verde-oscuro);
-
-      transform: translateY(-2px);
-
-      box-shadow:
-        0 8px 22px rgba(0,0,0,0.18);
-    }
-
-
-    /*
-      Indicador de desplazamiento
-    */
-
     .hero-scroll {
       position: absolute;
 
@@ -350,6 +313,125 @@
 
       animation:
         scrollPulse 2s ease-in-out infinite;
+    }
+
+
+    /* =========================
+       BOTONES
+    ========================= */
+
+    .btn {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      min-height: 50px;
+
+      padding: 0.8rem 1.3rem;
+
+      border-radius: 8px;
+
+      background: var(--verde);
+
+      color: white;
+
+      font-weight: 600;
+
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+
+    .btn:hover {
+      background: var(--verde-oscuro);
+
+      transform: translateY(-2px);
+
+      box-shadow:
+        0 8px 22px rgba(0,0,0,0.18);
+    }
+
+
+    /* =========================
+       ANIMACIONES AL HACER SCROLL
+    ========================= */
+
+    .reveal {
+      opacity: 0;
+
+      transform: translateY(35px);
+
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+
+    .reveal.visible {
+      opacity: 1;
+
+      transform: translateY(0);
+    }
+
+
+    .reveal-left {
+      opacity: 0;
+
+      transform: translateX(-35px);
+
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+
+    .reveal-left.visible {
+      opacity: 1;
+
+      transform: translateX(0);
+    }
+
+
+    .reveal-right {
+      opacity: 0;
+
+      transform: translateX(35px);
+
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+
+    .reveal-right.visible {
+      opacity: 1;
+
+      transform: translateX(0);
+    }
+
+
+    /* Retrasos */
+
+    .delay-1 {
+      transition-delay: 0.1s;
+    }
+
+
+    .delay-2 {
+      transition-delay: 0.2s;
+    }
+
+
+    .delay-3 {
+      transition-delay: 0.3s;
+    }
+
+
+    .delay-4 {
+      transition-delay: 0.4s;
     }
 
 
@@ -650,6 +732,17 @@
       margin-bottom: 0.8rem;
 
       overflow: hidden;
+
+      transition:
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+
+    details:hover {
+      border-color: rgba(82,121,111,0.45);
+
+      box-shadow: var(--sombra);
     }
 
 
@@ -727,6 +820,17 @@
       border-radius: 16px;
 
       box-shadow: var(--sombra);
+
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+
+    .blog-card:hover {
+      transform: translateY(-4px);
+
+      box-shadow: var(--sombra-hover);
     }
 
 
@@ -777,6 +881,13 @@
       font-weight: 700;
 
       font-size: 0.92rem;
+
+      transition: color 0.2s ease;
+    }
+
+
+    .blog-link:hover {
+      color: var(--verde);
     }
 
 
@@ -1142,6 +1253,16 @@
         transition-duration: 0.01ms !important;
       }
 
+
+      .reveal,
+      .reveal-left,
+      .reveal-right {
+
+        opacity: 1 !important;
+
+        transform: none !important;
+      }
+
     }
 
   </style>
@@ -1190,8 +1311,6 @@
     </div>
 
 
-    <!-- Indicador de desplazamiento -->
-
     <div
       class="hero-scroll"
       aria-hidden="true"
@@ -1219,15 +1338,15 @@
 
       <div class="container">
 
-        <div class="section-label">
+        <div class="section-label reveal">
           Espacio de escucha
         </div>
 
-        <h2 class="section-title">
+        <h2 class="section-title reveal delay-1">
           En qué puedo acompañarte
         </h2>
 
-        <p class="section-intro">
+        <p class="section-intro reveal delay-2">
           La consulta psicológica puede ser un espacio para detenerse,
           poner en palabras aquello que genera malestar y comenzar a
           pensar de otro modo lo que está sucediendo.
@@ -1235,7 +1354,7 @@
 
 
         <img
-          class="acompanamiento-image"
+          class="acompanamiento-image reveal"
           src="divan-psicoanalisis.jpg"
           alt="Espacio clínico psicoanalítico"
           loading="lazy"
@@ -1245,7 +1364,7 @@
         <div class="cards">
 
 
-          <article class="card">
+          <article class="card reveal delay-1">
 
             <h3>
               Ansiedad y angustia
@@ -1260,7 +1379,7 @@
           </article>
 
 
-          <article class="card">
+          <article class="card reveal delay-2">
 
             <h3>
               Crisis vitales
@@ -1274,7 +1393,7 @@
           </article>
 
 
-          <article class="card">
+          <article class="card reveal delay-3">
 
             <h3>
               Duelo y pérdidas
@@ -1303,22 +1422,22 @@
 
       <div class="container">
 
-        <div class="section-label">
+        <div class="section-label reveal">
           Modalidad
         </div>
 
-        <h2 class="section-title">
+        <h2 class="section-title reveal delay-1">
           Un espacio pensado para vos
         </h2>
 
-        <p class="section-intro">
+        <p class="section-intro reveal delay-2">
           La atención se desarrolla completamente online, buscando
           sostener un encuadre clínico cuidado y acorde a cada proceso.
         </p>
 
 
         <img
-          class="modalidad-image"
+          class="modalidad-image reveal"
           src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=85"
           alt="Modalidad de atención psicológica online"
           loading="lazy"
@@ -1328,7 +1447,7 @@
         <div class="modalidad-grid">
 
 
-          <div class="modalidad-item">
+          <div class="modalidad-item reveal delay-1">
 
             <h3>
               Atención 100% online
@@ -1342,7 +1461,7 @@
           </div>
 
 
-          <div class="modalidad-item">
+          <div class="modalidad-item reveal delay-2">
 
             <h3>
               Sesiones individuales
@@ -1356,7 +1475,7 @@
           </div>
 
 
-          <div class="modalidad-item">
+          <div class="modalidad-item reveal delay-3">
 
             <h3>
               Duración aproximada: 45 minutos
@@ -1370,7 +1489,7 @@
           </div>
 
 
-          <div class="modalidad-item">
+          <div class="modalidad-item reveal delay-4">
 
             <h3>
               Frecuencia
@@ -1399,15 +1518,15 @@
 
       <div class="container">
 
-        <div class="section-label">
+        <div class="section-label reveal">
           Primer encuentro
         </div>
 
-        <h2 class="section-title">
+        <h2 class="section-title reveal delay-1">
           ¿Cómo es la primera consulta?
         </h2>
 
-        <p class="section-intro">
+        <p class="section-intro reveal delay-2">
           El primer encuentro es, ante todo, un espacio para poder
           hablar de aquello que te trae a consultar. No es necesario
           llegar con todo claro ni saber exactamente qué decir.
@@ -1417,7 +1536,7 @@
         <div class="pasos">
 
 
-          <article class="paso">
+          <article class="paso reveal delay-1">
 
             <h3>
               Primer contacto
@@ -1431,7 +1550,7 @@
           </article>
 
 
-          <article class="paso">
+          <article class="paso reveal delay-2">
 
             <h3>
               Primer encuentro
@@ -1446,7 +1565,7 @@
           </article>
 
 
-          <article class="paso">
+          <article class="paso reveal delay-3">
 
             <h3>
               Comenzar el proceso
@@ -1464,7 +1583,7 @@
         </div>
 
 
-        <p class="primera-consulta-cierre">
+        <p class="primera-consulta-cierre reveal delay-2">
           La primera consulta no implica un compromiso inmediato.
           Es también una oportunidad para conocernos y pensar juntos
           si este espacio resulta adecuado para lo que estás atravesando.
@@ -1483,11 +1602,11 @@
 
       <div class="container">
 
-        <div class="section-label">
+        <div class="section-label reveal">
           Preguntas frecuentes
         </div>
 
-        <h2 class="section-title">
+        <h2 class="section-title reveal delay-1">
           Preguntas frecuentes
         </h2>
 
@@ -1495,7 +1614,7 @@
         <div class="faq-list">
 
 
-          <details>
+          <details class="reveal delay-1">
 
             <summary>
               ¿La atención psicológica online es efectiva?
@@ -1510,7 +1629,7 @@
           </details>
 
 
-          <details>
+          <details class="reveal delay-2">
 
             <summary>
               ¿Necesito tener un problema grave para consultar?
@@ -1524,7 +1643,7 @@
           </details>
 
 
-          <details>
+          <details class="reveal delay-3">
 
             <summary>
               ¿Cómo se define el valor de la sesión?
@@ -1538,7 +1657,7 @@
           </details>
 
 
-          <details>
+          <details class="reveal delay-4">
 
             <summary>
               ¿El espacio es confidencial?
@@ -1567,22 +1686,21 @@
 
       <div class="container">
 
-        <div class="section-label">
+        <div class="section-label reveal">
           Blog
         </div>
 
-        <h2 class="section-title">
+        <h2 class="section-title reveal delay-1">
           Algunas preguntas para pensar
         </h2>
 
-        <p class="section-intro">
+        <p class="section-intro reveal delay-2">
           Textos sobre malestar, vínculos, ansiedad, pérdidas y distintas
           experiencias de la vida cotidiana desde una perspectiva psicoanalítica.
         </p>
 
 
-        <article class="blog-card">
-
+        <article class="blog-card reveal">
 
           <div
             class="blog-image"
@@ -1611,7 +1729,6 @@
 
           </div>
 
-
         </article>
 
       </div>
@@ -1627,7 +1744,7 @@
 
       <div class="container">
 
-        <div class="contact-box">
+        <div class="contact-box reveal">
 
           <h2>
             ¿Querés comenzar a hablar de lo que te pasa?
@@ -1665,7 +1782,7 @@
         <div class="about-grid">
 
 
-          <div class="about-image">
+          <div class="about-image reveal-left">
 
             <img
               src="foto_apaisada.png"
@@ -1676,7 +1793,7 @@
           </div>
 
 
-          <div class="about-text">
+          <div class="about-text reveal-right">
 
             <div class="section-label">
               Sobre mí
@@ -1756,6 +1873,78 @@
     </div>
 
   </footer>
+
+
+  <!-- =========================
+       JAVASCRIPT
+       Animaciones al hacer scroll
+  ========================= -->
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const elementos = document.querySelectorAll(
+        ".reveal, .reveal-left, .reveal-right"
+      );
+
+
+      /*
+        Si el navegador no soporta IntersectionObserver,
+        mostramos directamente todos los elementos.
+      */
+
+      if (!("IntersectionObserver" in window)) {
+
+        elementos.forEach(function (elemento) {
+          elemento.classList.add("visible");
+        });
+
+        return;
+      }
+
+
+      const observer = new IntersectionObserver(
+
+        function (entradas, observer) {
+
+          entradas.forEach(function (entrada) {
+
+            if (entrada.isIntersecting) {
+
+              entrada.target.classList.add("visible");
+
+              /*
+                Una vez mostrado el elemento,
+                dejamos de observarlo.
+              */
+
+              observer.unobserve(entrada.target);
+
+            }
+
+          });
+
+        },
+
+        {
+          threshold: 0.12,
+
+          rootMargin: "0px 0px -40px 0px"
+        }
+
+      );
+
+
+      elementos.forEach(function (elemento) {
+
+        observer.observe(elemento);
+
+      });
+
+    });
+
+  </script>
 
 
 </body>
